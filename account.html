@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>All Products -GenZ.Store</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,600&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    </head>
+    <body>
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <a href="index.html"><img src="Images/logofi.PNG" width="125px"></a>
+                    </div>
+                    <nav>
+                        <ul id="MenuItems">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="productdetails.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="account.html">Account</a></li>
+                        </ul>
+                    </nav>
+                    <a href="cart.html"><img src="Images/cart.png" width="30px" height="30px"></a>
+                    <img src="Images/menu.png" class="menu-icon" onclick="menutoggle()">
+                </div>
+            </div>
+<!----------------Account page------------> 
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="Images/mnz-RsJDUzKdBws-unsplash.jpg" width="100%">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="indicator">
+                    </div>
+                    <form id="loginForm" action="/" method="GET">
+                        <input type="text" placeholder="Username" id="username" required>
+                        <input type="password" placeholder="Password" id="password" required>
+                        <button type="submit" class="btn">Login</button>
+                        <a href="#">Forgot password?</a>
+                    </form>
+
+                    <form id="regForm" action="/" method="GET">
+                        <input type="text" placeholder="Username" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Password" required>
+                        <button type="submit" class="btn">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!----------------footer------------> 
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Andriod and ios mobile phone</p>
+                    <div class="app-logo">
+                        <img src="Images/logo_play.png">
+                        <img src="Images/logo_app.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="Images/logofi.PNG">
+                    <p>Our purpose is to sustainably make the pleaser and benefits of sports accessible to the many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <a href="https://www.facebook.com/"><li>Facebook</li></a>
+                        <a href="https://twitter.com/"><li>Twitter</li></a>
+                        <a href="https://www.instagram.com/?hl=en"><li>Instagram</li></a>
+                        <a href="https://www.youtube.com/"><li>YouTube</li></a>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2021 - GenZ</p>
+        </div>
+    </div>
+    <script defer src="account.js"></script> 
+    </body>
+</html>
