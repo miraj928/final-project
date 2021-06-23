@@ -46,18 +46,20 @@
                         <hr id="indicator">
                     </div>
                     <form id="loginForm" action="/" method="GET">
-                        <input type="text" placeholder="Username" id="username" required>
-                        <input type="password" placeholder="Password" id="password" required>
+                        <input type="text" placeholder="Username" id="username">
+                        <input type="password" placeholder="Password" id="password">
                         <button type="submit" class="btn">Login</button>
                         <a href="#">Forgot password?</a>
                     </form>
+                    <h3 id="log-response"></h3>
 
                     <form id="regForm" action="/" method="GET">
-                        <input type="text" placeholder="Username" required>
-                        <input type="email" placeholder="Email" required>
-                        <input type="password" placeholder="Password" required>
+                        <input type="text" placeholder="Username" id="createname" required>
+                        <input type="email" placeholder="Email" id="email" required>
+                        <input type="password" placeholder="Password" id="pass" required>
                         <button type="submit" class="btn">Register</button>
                     </form>
+                    <h3 id="reg-response"></h3>
                 </div>
             </div>
         </div>
@@ -103,5 +105,59 @@
         </div>
     </div>
     <script defer src="account.js"></script> 
+    <!--<script>
+        var loginForm = document.getElementById("loginForm");
+        var regForm = document.getElementById("regForm");
+        var indicator = document.getElementById("indicator");
+
+        function register() {
+            regForm.style.transform = "translateX(0px)";
+            loginForm.style.transform = "translateX(0px)";
+            indicator.style.transform = "translateX(100px)";
+        };
+
+        function login() {
+            regForm.style.transform = "translateX(300px)";
+            loginForm.style.transform = "translateX(300px)";
+            indicator.style.transform = "translateX(0px)";
+        };
+    </script>  
+    <script>
+        var logform = document.getElementById("loginForm");
+        logform.addEventListener("submit", async(event) => {
+        event.preventDefault();
+    // ------------------for login form---------------------//
+        let loginName = document.getElementById("username");
+        let passcode = document.getElementById("password");
+
+        if (loginName.value && passcode.value) {
+            const url ="http://localhost:3000/ ";
+        
+            let data = {
+                username: loginName.value,
+                password: passcode.value,
+            };
+
+            var request = new Request(url, {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {"Content-Type": "application/json; charset=UTF-8" },
+            });
+
+            let response = await fetch(request);
+        
+            if (response.ok) {
+                let id = await response.json();
+                var result = document.getElementById("log-response");
+                result.innerHTML= "Welcome! You're logged in."
+            } else {
+                var result = document.getElementById("log-response");
+                result.innerHTML= "Username or password is wrong!!"
+            }
+        } else {
+            window.alert("Please complete the form")
+        }
+    });
+    </script> -->
     </body>
 </html>
